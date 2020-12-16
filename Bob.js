@@ -3,10 +3,9 @@ class Bob{
         var ball_options ={
          isStatic: true    
         } 
-         
-        this.body = Bodies.circle(x,y,radius, ball_options); 
-        this.width = width;
-        this.height = height;
+        
+        this.body = Bodies.ellipse(x,y,radius, ball_options); 
+        this.radius = radius;
         World.add(world,this.body);
 
         
@@ -15,8 +14,7 @@ class Bob{
     display(){
 
     var pos = this.body.position;
-    rectMode(CENTER);
-    circle(pos.x,pos.y,width,height);
-        
+    ellipseMODE(RADIUS);
+    ellipse(pos.x,pos.y,this.radius,this.radius);        
     }
 }
